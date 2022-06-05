@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap demo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <style>
+      *{
+          margin:0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body{
+          position: relative;
+          background-color: rgb(238, 237, 242);
+          height:98vh;
+          width:98vw;
+          overflow: hidden;
+      }
+      .sidebar{
+          position:fixed ;
+          background-color: darkblue;
+          top:2vh;
+          left: 2vw;
+          height:94vh;
+          width:15vw;
+          border-radius:10px;
+          padding: 6px 14px;
+      }
+      .sidebar .header{
+          display: flex;
+          height: 8vh;
+          width:100%;
+          align-items: center;
+          border-bottom: 2px;
+          border-bottom-color: beige;
+          border-bottom-style: inset;
+          
+      }
+      .sidebar .header .page_name{
+          position: absolute;
+          font-size: large;
+          font-weight: 400;
+          top: 10px;
+          color: beige;
+          text-align: center;
+          line-height: 45px;
+          
+
+      }
+      .sidebar #btn{
+          position: absolute;
+          left: 85%;
+          top:10px;
+          color: beige;
+          font-size: x-large;
+          margin-right: 5px;
+          text-align: center;
+          line-height: 50px;
+          transform: translateX(-50%);
+          
+      }
+      
+      
+
+      .sidebar ul{
+          margin-top: 3vh;
+          margin-left: -2.2vw;
+      }
+
+      .sidebar ul li{
+          position: relative;
+          list-style: none;
+          height: 30px;
+          width: 100%;
+          margin: 20px 5px; 
+          line-height: 30px;
+      }
+      .sidebar ul li a{
+          color: beige;
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          justify-items: left;
+      }
+      .sidebar ul li:hover{
+          background-color: blue;
+          border-radius: 5px;
+          
+      }
+
+      .sidebar ul li a i{
+          height: 30px;
+          min-width: 30px;
+          border-radius: 5px;
+          line-height: 30px;
+          text-align: center;
+      }
+
+
+      .sidebar .footer{
+          
+          position: absolute;
+          color: beige;
+          bottom: 0;
+          left: 10px;
+      }
+
+      .sidebar .footer .chat input {
+        position: relative;
+        background-color: blue;
+        color: beige;
+        height: 30px;
+        width: 13vw;
+        padding-left: 30px;
+        left: 0;
+        top:0; 
+        border-radius: 5px;
+        outline: none;
+        border: none;
+      }
+
+      .sidebar .footer .chat i{
+          position: absolute;
+          z-index:300;
+          height: 30px;
+          width: 30px;
+          line-height: 30px;
+          color: beige;
+          left:10px;
+      }
+      .sidebar .footer li{
+          position: relative;
+          list-style: none;
+          height: 30px;
+          width: 100%;
+          margin: 20px 5px; 
+          line-height: 30px;
+      }
+      .sidebar .footer li a{
+          color: beige;
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          justify-items: left;
+      }
+      .sidebar .footer li:hover{
+          background-color: blue;
+          border-radius: 5px;
+          
+      }
+
+      .sidebar .footer li a i{
+          height: 30px;
+          min-width: 30px;
+          border-radius: 5px;
+          line-height: 30px;
+          text-align: center;
+      }
+      .sidebar .footer .profile{
+          margin-bottom: 1vh;
+          text-align: center;
+      }
+      .sidebar .footer .profile img{
+          height: 40px;
+          width: 40px;
+          object-fit: cover;
+          border-radius: 10px;
+          margin: 10px;
+          left:0;
+          transform: translateX(-40%);
+      }
+  </style>
+  
+  <body>    
+        <div class="sidebar">
+            <div class="header">
+                <div class="page_name">Dashboard</div>
+                <i class='bx bx-menu' id="btn"></i>
+            </div>
+            <ul class="nav_list">
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-home' ></i>
+                        <span class="link_name">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-food-menu' ></i>
+                        <span class="link_name">Workbook</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-group' ></i>
+                        <span class="link_name">Employees</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="footer">
+                <div class="chat"> 
+                    <i class='bx bxl-telegram' ></i>
+                    <input type="text" placeholder="Messages">
+                </div>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-cog' ></i>
+                        <span class="link_name">Settings</span>
+                    </a>
+                </li>
+                <div class="profile">
+                    <img src="img.jpg" alt="">
+                    <span class="name">Hi, there David</span>
+                </div>
+            </div>
+        </div>    
+  </body>
+</html>
